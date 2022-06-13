@@ -64,17 +64,17 @@
              public long OrdenarInsercionSimple() {
 		 Node<E> cont2 = this.first;
 		 long nano_startTime = System.nanoTime(); 
-		 while(cont2.getNext() !=null) {
-			 E key= null;
+		 while(cont2.getNext() !=null) {  //Con este bucle haremos que el orden se de a todos los valores
+			 E key= null;       
 			 Node<E> cont = this.first;
-			 Node<E> aux = this.first;
+			 Node<E> aux = this.first;    //Con esto daremos condiciones para los intercambios y se den a los numeros
 			 for(; cont.getNext() != null && aux.getNext() != null && (int)aux.getData() > (int)aux.getNext().getData() ; cont = cont.getNext()) {
-				 key = aux.getNext().getData();
-				 while((int)aux.getData() > (int)aux.getNext().getData()) {
-	                 aux.getNext().setData(aux.getData());
+				 key = aux.getNext().getData();  //en la variable key guardamos el valor del siguiente nodo
+				 while((int)aux.getData() > (int)aux.getNext().getData()) { //si el valor del nodo actual es mayor que el siguiente se dara este bucle
+	                 aux.getNext().setData(aux.getData()); //al siguiente nodo se le dara el valor del nodo actual
 			       	}
-	             aux.setData(key);
-	             aux = aux.getNext();
+	             aux.setData(key); //al nodo actual le daremos los valores guardados en key
+	             aux = aux.getNext(); //para que el procedimiento se resuelva en el siguiente nodo
 	             System.out.println(toString());
 			 }
 			 cont2 = cont2.getNext();
