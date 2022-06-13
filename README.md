@@ -124,7 +124,7 @@ Resultados:
 ¿Cómo se ejecutaría sus implementaciones desde terminal(consola)? 
 
 Primero buscaria la ruta del jar por consola y copiar en una carpeta del usuario, luego ingreso a la carpeta que contiene mi .jar
-y ejecuto el comando java -jar con el nombre de mi archivo .jar y podria usar ya la implemtacion
+y ejecuto el comando java -jar con el nombre de mi archivo .jar y podria usar ya la implemetacion.
  
 
 
