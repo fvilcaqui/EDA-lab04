@@ -6,7 +6,7 @@ public class Ejercicio2 {
 		Scanner sc = new Scanner(System.in);
 		TDAList<Integer> link = new LinkedList<Integer>();
 		System.out.println("Ingresar la cantidad de elementos que desea: ");
-		int tam = 5;
+		int tam = 100;
 		IngresarDatos(link,tam);
 		System.out.println(link);
 		link.OrdenarInsercionDoble();

@@ -56,24 +56,22 @@ private Node<E> tail;
 	}		
 	
 	public void OrdenarInsercionDoble() {
-		E key= null;
 		Node<E> a = this.first;
-		Node<E> cont;
+		Node<E> cont = this.first;
+		E key = null;
 		Node<E> aux = this.first;
 		aux = aux.getNext();
 		for(;a.getNext() != null; a = a.getNext()) {
-			key = aux.getData();
 			cont = aux;
-			System.out.println(key);
-			while(cont.getAnt() != null) {
-				cont.getNext().setData(cont.getData());
+			while(cont.getAnt() != null && (int)cont.getAnt().getData()>(int)cont.getData()) {
+				key = cont.getAnt().getData();
+				cont.getAnt().setData(cont.getData());
+				cont.setData(key);
 				cont = cont.getAnt();
 			}
 			aux = aux.getNext();
-			cont.getNext().setData(key);
 			System.out.println(toString());
-		}
-	     		
+		}     		
 	}
 		
 	public String toString() {
